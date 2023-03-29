@@ -1,3 +1,4 @@
+import RecipeList from '@pages/RecipeList';
 import React, { useState } from 'react';
 
 function App() {
@@ -6,7 +7,8 @@ function App() {
 
   return (
     <div>
-      <p>{query}</p>
+      {/* <p>{query}</p> */}
+      <RecipeList />
     </div>
   );
 }
