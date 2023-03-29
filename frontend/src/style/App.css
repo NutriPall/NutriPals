@@ -1,12 +1,16 @@
-
-p, li {
-  font-family: "Manrope", sans-serif;
+:root {
+    --main-font-text: "Manrope", sans-serif;
+    --main-font-heading: 'Archivo Black', sans-serif;
+    --main-color: #C7F075;
+    --secondary-color: #70D799;
+    --main-color-text: #3D4F19;
 }
 
-li {
-    font-family: "Manrope", sans-serif;  
+
+p, li {
+  font-family: var(--main-font-text);
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Archivo Black', sans-serif;
+    font-family: var(--main-font-heading);
 }
