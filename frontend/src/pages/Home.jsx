@@ -12,9 +12,11 @@ export default function Home() {
         <li>And a list</li>
         <li>With two items</li>
       </ul>
-      <Button variant="mainButton" className="button">
-        Hello, I am button
-      </Button>
+      <div className="btn-container">
+        <Button variant="outline-secondary" className="btn-primary" active>
+          Hello, I am button
+        </Button>
+      </div>
       <p>
         <a href="www.nothing.com">I am a link to nothing</a>
         <br />
