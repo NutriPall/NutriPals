@@ -4,6 +4,7 @@ import AboutUs from "@pages/About-us";
 import Recipes from "@pages/Recipes";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
+import ContactUs from "./pages/Contact-us";
 import "./style/App.css";
 
 function App() {
