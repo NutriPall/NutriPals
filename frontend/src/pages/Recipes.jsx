@@ -3,7 +3,7 @@ import React from "react";
 export default function Recipes() {
   return (
     <div>
-      <p>Content</p>
+      <p>Recipes content</p>
     </div>
   );
 }

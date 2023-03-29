@@ -9,18 +9,20 @@ import "./style/App.css";
 
 function App() {
   return (
-    <Router>
-      <div>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/recipes" element={<Recipes />} />
-          <Route path="/recipes/:nutritionalValue" element={<Recipes />} />
-          <Route path="/contact-us" element={<ContactUs />} />
-        </Routes>
-      </div>
-    </Router>
+    <div>
+      <Router>
+        <div>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/recipes" element={<Recipes />} />
+            <Route path="/recipes/:nutritionalValue" element={<Recipes />} />
+            <Route path="/contact-us" element={<ContactUs />} />
+          </Routes>
+        </div>
+      </Router>
+    </div>
   );
 }
 
