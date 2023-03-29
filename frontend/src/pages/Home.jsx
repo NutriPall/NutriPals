@@ -15,6 +15,15 @@ export default function Home() {
       <Button variant="mainButton" className="button">
         Hello, I am button
       </Button>
+      <p>
+        <a href="www.nothing.com">I am a link to nothing</a>
+        <br />
+        <img
+          src="https://i.imgur.com/fZBbLjQ.jpg"
+          alt="a capybara looking to the infinite"
+          title="Capybara"
+        />
+      </p>
     </header>
   );
 }

@@ -8,14 +8,10 @@ body {
     --main-color: #C7F075;
     --secondary-color: #70D799;
     --main-color-text: #36421c;
+    --main-color-links: #667b6e;
+    --main-color-links-visited: #84988c;
 }
 
-
-p, li {
-  font-family: var(--main-font-text);
-  font-size: clamp(14px, 2vw, 25px);
-  color: var(--main-color-text);
-}
 
 h1, h2, h3, h4 {
     font-family: var(--main-font-heading);
@@ -36,4 +32,29 @@ h3 {
 
 h4 {
     font-size: clamp(21px, 3vw, 30px);
+}
+
+p, li {
+  font-family: var(--main-font-text);
+  font-size: clamp(14px, 2vw, 25px);
+  color: var(--main-color-text);
+}
+
+
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--main-color-links);
+}
+
+a:visited {
+    color: var(--main-color-links-visited);
+}
+
+img {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 50px;
+    max-width: 65%;
 }
