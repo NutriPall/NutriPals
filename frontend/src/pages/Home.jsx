@@ -1,3 +1,5 @@
+import Button from "react-bootstrap/Button";
+
 export default function Home() {
   return (
     <header className="App-header">
@@ -10,9 +12,9 @@ export default function Home() {
         <li>And a list</li>
         <li>With two items</li>
       </ul>
-      <button type="button" className="button">
+      <Button variant="mainButton" className="button">
         Hello, I am button
-      </button>
+      </Button>
     </header>
   );
 }
