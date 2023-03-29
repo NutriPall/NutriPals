@@ -1,16 +1,39 @@
+body {
+    margin: 20px;
+}
+
 :root {
     --main-font-text: "Manrope", sans-serif;
     --main-font-heading: 'Archivo Black', sans-serif;
     --main-color: #C7F075;
     --secondary-color: #70D799;
-    --main-color-text: #3D4F19;
+    --main-color-text: #36421c;
 }
 
 
 p, li {
   font-family: var(--main-font-text);
+  font-size: clamp(14px, 2vw, 25px);
+  color: var(--main-color-text);
 }
 
 h1, h2, h3, h4 {
     font-family: var(--main-font-heading);
+    color: var(--main-color-text);
+}
+
+h1 {
+    font-size: clamp(42px, 5vw, 70px);
+}
+
+h2 {
+    font-size: clamp(35px, 4.5vw, 60px);
+}
+
+h3 {
+    font-size: clamp(28px, 4vw, 50px);
+}
+
+h4 {
+    font-size: clamp(21px, 3vw, 30px);
 }
