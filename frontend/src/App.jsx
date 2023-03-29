@@ -1,12 +1,12 @@
-import Home from "./pages/Home";
-
-import "./App.css";
+import React, { useState } from 'react';
 
 function App() {
+
+  const [query, setQuery] = useState('');
+
   return (
-    <div className="App">
-      <Home />
-      <p>coucou</p>
+    <div>
+      <p>{query}</p>
     </div>
   );
 }
