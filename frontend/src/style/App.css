@@ -64,5 +64,6 @@ img {
     color: var(--main-color-text);
     border-color: var(--main-color);
     font-family: var(--main-font-text);
+    border-radius: 5px;
     margin-bottom: 15px;
 }
