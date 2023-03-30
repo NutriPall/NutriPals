@@ -1,14 +1,14 @@
 import React from "react";
+import { Link} from "react-router-dom"
 
-function openWin() {
-    window.open("https://www.w3schools.com");
-  }
+
 
 function RecipeCard({ recipe }) {
 
     const { label, calories, mealType, source } = recipe;
     const imageUrl = recipe.images?.SMALL?.url;
     const nrIngredients = recipe.ingredientLines.length
+    const recipeId = recipe.uri.slice(recipe.uri.indexOf("_") + 1);
 
   return recipe ? (
     
@@ -18,9 +18,9 @@ function RecipeCard({ recipe }) {
         <p>{calories.toFixed(0)} cal</p>
         <p>{nrIngredients} ingred | {mealType}</p>
         <p>{source}</p>
-        <form>
-            <input type="button" value="Open Recipe" onClick={openWin}/>
-        </form>
+        <Link to={`/recipe/${recipeId}`}>
+          <button type="button" >Open Recipe</button>
+        </Link>
     </div>
   ) : null;
 }

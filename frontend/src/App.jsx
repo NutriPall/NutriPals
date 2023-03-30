@@ -1,14 +1,15 @@
 import RecipeList from '@pages/RecipeList';
-import React, { useState } from 'react';
+import RecipeDetails from '@components/RecipeDetails/RecipeDetails';
+import {Routes, Route} from "react-router-dom"
 
 function App() {
 
-  const [query, setQuery] = useState('');
-
   return (
     <div>
-      {/* <p>{query}</p> */}
-      <RecipeList />
+      <Routes>
+        <Route path="/recipes-list" element={<RecipeList />} />
+        <Route path="/recipe/:id" element={<RecipeDetails />} />
+      </Routes>
     </div>
   );
 }
