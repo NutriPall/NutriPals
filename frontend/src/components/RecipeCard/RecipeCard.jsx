@@ -1,8 +1,6 @@
 import React from "react";
 import { Link} from "react-router-dom"
 
-
-
 function RecipeCard({ recipe }) {
 
     const { label, calories, mealType, source } = recipe;
@@ -24,7 +22,5 @@ function RecipeCard({ recipe }) {
     </div>
   ) : null;
 }
-
-
 
 export default RecipeCard
