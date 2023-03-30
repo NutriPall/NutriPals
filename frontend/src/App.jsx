@@ -1,12 +1,15 @@
-import Home from "./pages/Home";
-
-import "./App.css";
+import RecipeList from '@pages/RecipeList';
+import RecipeDetails from '@components/RecipeDetails/RecipeDetails';
+import {Routes, Route} from "react-router-dom"
 
 function App() {
+
   return (
-    <div className="App">
-      <Home />
-      <p>coucou</p>
+    <div>
+      <Routes>
+        <Route path="/recipes-list" element={<RecipeList />} />
+        <Route path="/recipe/:id" element={<RecipeDetails />} />
+      </Routes>
     </div>
   );
 }
