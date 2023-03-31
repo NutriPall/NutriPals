@@ -1,5 +1,6 @@
 import RecipeList from '@pages/RecipeList';
 import React, { useState } from 'react';
+import SearchBar from './components/SearchBar/SearchBar';
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
   return (
     <div>
       {/* <p>{query}</p> */}
+      <SearchBar />
       <RecipeList />
     </div>
   );
