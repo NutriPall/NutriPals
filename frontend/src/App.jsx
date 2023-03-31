@@ -6,8 +6,12 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import ContactUs from "./pages/Contact-us";
 import "./style/App.css";
+import RecipeList from '@pages/RecipeList';
+import RecipeDetails from '@components/RecipeDetails/RecipeDetails';
+import {Routes, Route} from "react-router-dom"
 
 function App() {
+
   return (
     <div>
       <Router>
@@ -16,8 +20,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/recipes" element={<Recipes />} />
-            <Route path="/recipes/:nutritionalValue" element={<Recipes />} />
+            <Route path="/recipes-list" element={<RecipeList />} />
+            <Route path="/recipe/:id" element={<RecipeDetails />} />
             <Route path="/contact-us" element={<ContactUs />} />
           </Routes>
         </div>
