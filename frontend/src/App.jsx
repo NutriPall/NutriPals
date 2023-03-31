@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 import "./style/App.css";
 import RecipeList from '@pages/RecipeList';
 import RecipeDetails from '@components/RecipeDetails/RecipeDetails';
-import ContactUs from '@components/ContactUs/ContactUs';
+import ContactUs from "@pages/ContactUs/ContactUs";
 
 function App() {
 
