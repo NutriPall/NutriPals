@@ -32,7 +32,7 @@ const RecipeDetails = () => {
         <section>
           
           <p>Servings: {recipe.yield}</p>
-          <p>{recipe.calories.toFixed(0)/recipe.yield} cal/serv</p>
+          <p>{(recipe.calories/recipe.yield).toFixed(0)} cal/serv</p>
           <p>{recipe.dishType}</p>
           <p>cooking time: {recipe.totalTime} min</p>
         </section>
