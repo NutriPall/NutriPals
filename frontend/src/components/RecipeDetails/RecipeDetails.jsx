@@ -6,6 +6,7 @@ const RecipeDetails = () => {
   const { id } = useParams();
   const [recipe, setRecipe] = useState();
 
+
   function getSingleRecipe() {
     axios
       .get(
@@ -22,7 +23,7 @@ const RecipeDetails = () => {
   useEffect(() => {
     getSingleRecipe();
   }, []);
-
+  
   return recipe ? (
     <div>
       <h1>{recipe.label}</h1>
@@ -62,41 +63,42 @@ const RecipeDetails = () => {
                       {dietLabel}{index !== recipe.dietLabels.length-1 && ", "}
                       </span>
                       )):null} 
-
+                <p>{recipe.totalNutrients?.FASAT.quantity.toFixed(0) / recipe.totalNutrients?.FAT.quantity.toFixed(0)}</p>
+                    
               <section className="row row-cols-3">
-                <p>{recipe.totalNutrients.FAT.label}</p>
-                <p>{recipe.totalNutrients.FAT.quantity.toFixed(0)}</p>
-                <p>{recipe.totalNutrients.FAT.unit}</p>
+                <p>{recipe.totalNutrients?.FAT.label}</p>
+                <p>{recipe.totalNutrients?.FAT.quantity.toFixed(0)}</p>
+                <p>{recipe.totalNutrients?.FAT.unit}</p>
               </section>
               <section className="row row-cols-3">
-                  <p>{recipe.totalNutrients.FASAT.label}</p>
-                  <p>{recipe.totalNutrients.FASAT.quantity.toFixed(0)}</p>
-                  <p>{recipe.totalNutrients.FASAT.unit}</p>
+                  <p>{recipe.totalNutrients?.FASAT.label}</p>
+                  <p>{recipe.totalNutrients?.FASAT.quantity.toFixed(0)}</p>
+                  <p>{recipe.totalNutrients?.FASAT.unit}</p>
               </section>
               <section className="row row-cols-3">
-                  <p>{recipe.totalNutrients.FATRN.label}</p>
-                  <p>{recipe.totalNutrients.FATRN.quantity.toFixed(0)}</p>
-                  <p>{recipe.totalNutrients.FATRN.unit}</p>
+                  <p>{recipe.totalNutrients?.FATRN.label}</p>
+                  <p>{recipe.totalNutrients?.FATRN.quantity.toFixed(0)}</p>
+                  <p>{recipe.totalNutrients?.FATRN.unit}</p>
               </section>
               <section className="row row-cols-3">
-                  <p>{recipe.totalNutrients.FAMS.label}</p>
-                  <p>{recipe.totalNutrients.FAMS.quantity.toFixed(0)}</p>
-                  <p>{recipe.totalNutrients.FAMS.unit}</p>
+                  <p>{recipe.totalNutrients?.FAMS.label}</p>
+                  <p>{recipe.totalNutrients?.FAMS.quantity.toFixed(0)}</p>
+                  <p>{recipe.totalNutrients?.FAMS.unit}</p>
               </section>
               <section className="row row-cols-3">
-                  <p>{recipe.totalNutrients.FAPU.label}</p>
-                  <p>{recipe.totalNutrients.FAPU.quantity.toFixed(0)}</p>
-                  <p>{recipe.totalNutrients.FAPU.unit}</p>
+                  <p>{recipe.totalNutrients?.FAPU.label}</p>
+                  <p>{recipe.totalNutrients?.FAPU.quantity.toFixed(0)}</p>
+                  <p>{recipe.totalNutrients?.FAPU.unit}</p>
               </section>
               <section className="row row-cols-3">
-                <p>{recipe.totalNutrients.SUGAR.label}</p>
-                <p>{recipe.totalNutrients.SUGAR.quantity.toFixed(0)}</p>
-                <p>{recipe.totalNutrients.SUGAR.unit}</p>
+                <p>{recipe.totalNutrients?.SUGAR.label}</p>
+                <p>{recipe.totalNutrients?.SUGAR.quantity.toFixed(0)}</p>
+                <p>{recipe.totalNutrients?.SUGAR.unit}</p>
               </section>
               <section className="row row-cols-3">
-                <p>{recipe.totalNutrients.FIBTG.label}</p>
-                <p>{recipe.totalNutrients.FIBTG.quantity.toFixed(0)}</p>
-                <p>{recipe.totalNutrients.FIBTG.unit}</p>
+                <p>{recipe.totalNutrients?.FIBTG.label}</p>
+                <p>{recipe.totalNutrients?.FIBTG.quantity.toFixed(0)}</p>
+                <p>{recipe.totalNutrients?.FIBTG.unit}</p>
               </section>
               
 
@@ -111,3 +113,4 @@ const RecipeDetails = () => {
 };
 
 export default RecipeDetails;
+
