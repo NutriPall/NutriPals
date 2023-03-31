@@ -1,21 +1,17 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import AboutUs from "@pages/About-us";
-import Recipes from "@pages/Recipes";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
-import ContactUs from "./pages/Contact-us";
 import "./style/App.css";
 import RecipeList from '@pages/RecipeList';
 import RecipeDetails from '@components/RecipeDetails/RecipeDetails';
-import {Routes, Route} from "react-router-dom"
 import ContactUs from '@components/ContactUs/ContactUs';
 
 function App() {
 
   return (
     <div>
-      <Router>
         <div>
           <Navbar />
           <Routes>
@@ -26,7 +22,6 @@ function App() {
             <Route path="/contact-us" element={<ContactUs />} />
           </Routes>
         </div>
-      </Router>
     </div>
   );
 }
