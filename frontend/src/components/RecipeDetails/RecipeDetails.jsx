@@ -62,10 +62,31 @@ const RecipeDetails = () => {
                       {dietLabel}{index !== recipe.dietLabels.length-1 && ", "}
                       </span>
                       )):null} 
+
               <section className="row row-cols-3">
                 <p>{recipe.totalNutrients.FAT.label}</p>
                 <p>{recipe.totalNutrients.FAT.quantity.toFixed(0)}</p>
                 <p>{recipe.totalNutrients.FAT.unit}</p>
+              </section>
+              <section className="row row-cols-3">
+                  <p>{recipe.totalNutrients.FASAT.label}</p>
+                  <p>{recipe.totalNutrients.FASAT.quantity.toFixed(0)}</p>
+                  <p>{recipe.totalNutrients.FASAT.unit}</p>
+              </section>
+              <section className="row row-cols-3">
+                  <p>{recipe.totalNutrients.FATRN.label}</p>
+                  <p>{recipe.totalNutrients.FATRN.quantity.toFixed(0)}</p>
+                  <p>{recipe.totalNutrients.FATRN.unit}</p>
+              </section>
+              <section className="row row-cols-3">
+                  <p>{recipe.totalNutrients.FAMS.label}</p>
+                  <p>{recipe.totalNutrients.FAMS.quantity.toFixed(0)}</p>
+                  <p>{recipe.totalNutrients.FAMS.unit}</p>
+              </section>
+              <section className="row row-cols-3">
+                  <p>{recipe.totalNutrients.FAPU.label}</p>
+                  <p>{recipe.totalNutrients.FAPU.quantity.toFixed(0)}</p>
+                  <p>{recipe.totalNutrients.FAPU.unit}</p>
               </section>
               <section className="row row-cols-3">
                 <p>{recipe.totalNutrients.SUGAR.label}</p>
@@ -77,6 +98,7 @@ const RecipeDetails = () => {
                 <p>{recipe.totalNutrients.FIBTG.quantity.toFixed(0)}</p>
                 <p>{recipe.totalNutrients.FIBTG.unit}</p>
               </section>
+              
 
 
 
