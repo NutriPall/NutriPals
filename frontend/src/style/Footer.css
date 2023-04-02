@@ -5,12 +5,14 @@ footer {
     background-color: var(--main-color-text);
     margin-top: 25px;
     margin-bottom: 0;
+    max-height: 150px;
 }
 
 .sign-off {
  color: var(--main-color-links);
  max-width: 35%;
  padding: 15px;
+ margin-right: auto;
 }
 
 .footer-links {
@@ -23,24 +25,27 @@ footer {
 
 #sign-off-text {
     color: var(--main-color-links);
-    font-size: clamp(21px, 3vw, 28px);;
+    font-size: clamp(21px, 3vw, 28px);
+    margin-right: 10px;
 }
 
-#sign-off-image {
+.sign-off-image {
     display: none;
 }
 
 @media screen and (min-width: 641px) {
     .footer-links p {
         padding: 10px;
+        font-size: 16px;
     }
     .footer-links {
         display: flex;
         justify-content: space-between;
        }
     
-    #sign-off-image {
+    .sign-off-image {
         display: block;
-        max-width: 20%;
+        max-height: 150px;
+        align-self: flex-start;
     }
 }
