@@ -7,14 +7,15 @@ import "./style/App.css";
 import RecipeList from '@pages/RecipeList';
 import RecipeDetails from '@components/RecipeDetails/RecipeDetails';
 import ContactUs from "@pages/ContactUs/ContactUs";
+import Footer from "@components/Footer";
 
 function App() {
 
   return (
     <>
     <div>
-        <div>
           <Navbar />
+          <div className="routes">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<AboutUs />} />
@@ -22,7 +23,8 @@ function App() {
             <Route path="/recipe/:id" element={<RecipeDetails />} />
             <Route path="/contact-us" element={<ContactUs />} />
           </Routes>
-        </div>
+          </div>
+          <Footer />
     </div>
     </>
   );
