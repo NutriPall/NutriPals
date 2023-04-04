@@ -2,7 +2,6 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import AboutUs from "@pages/About-us";
 import Home from "./pages/Home";
-import Navbar from "./components/Navbar/Navbar";
 import "./style/App.css";
 import RecipeList from '@pages/RecipeList';
 import RecipeDetails from '@components/RecipeDetails/RecipeDetails';

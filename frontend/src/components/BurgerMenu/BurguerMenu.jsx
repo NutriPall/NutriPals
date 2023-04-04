@@ -2,13 +2,21 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "./BurgerMenu.css"
 
 export default function BurgerMenu() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div className="navbar navbar-expand-md">
-      <h3 className="navbar-brand">NutriPals</h3>
+    <div className="navbar-container navbar-expand-md">
+        <img
+        className="nav-item"
+        id="logo"
+        src="https://i.imgur.com/a5Yd99l.png"
+        title="our logo"
+        alt="a drawing of a dish with a knife and a fork"
+      />
+      <h3 className="brand-name">NutriPals</h3>
       <button
         className="navbar-toggler"
         type="button"
@@ -16,7 +24,7 @@ export default function BurgerMenu() {
       >
         <span className="navbar-toggler-icon"></span>
       </button>
-      <div className={`collapse navbar-collapse ${showMenu ? "show" : ""}`} id="navbarTogglerDemo01">
+      <div className={`collapse navbar-collapse ${showMenu ? "show" : ""}`} >
         <ul className="navbar-nav ms-auto">
           <li className="nav-item">
           <Link className="nav-link" to="/">
