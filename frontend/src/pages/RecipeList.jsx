@@ -3,12 +3,14 @@ import axios from "axios"
 import RecipeCard from "../components/RecipeCard/RecipeCard";
 import SearchBar from "@components/SearchBar/SearchBar";
 import SearchFilter from "@components/SearchFilter/SearchFilter";
+import { object } from "prop-types";
 
 function RecipeList() {
   // Save data fetch in a state
-  const [ recipes, setRecipes ] = useState();
+  const [ recipes, setRecipes ] = useState("");
   const [ query, setQuery ] = useState('');
-  const [filter, setFilter] = useState()
+  const [filter, setFilter] = useState("")
+  const [filters, setFilters] = useState({})
   
 
   //* fetch the new endpoint using the value of the search
@@ -29,43 +31,51 @@ function RecipeList() {
 
   //* when the state changes, update the component
   useEffect(() => {
-    searchRecipe();
-  }, [query]);
-
-  
-
-    axios
-        .get(``)
-        .then((response) => {
-            setRecipes(response.data.hits)
-        })
+    handleFilterResults()
+  }, [filters]);
 
 
-    const handleFilter = () => {
-        setFilter()
+
+    const handleFilterResults = () => {
+      if (Object.keys(filters).length > 0) {
+      const trueFilters = Object.filter( filters, filter => filter === true )
+      console.log(trueFilters)
+      }
+    }
+
+    const handleFilter = (e) => {
+        setFilters({...filters,[e.target.name]:e.target.checked}) 
+      
+      // if (e.target.checked) {
+      //   setFilter(recipes.filter(recipe => recipe.recipe.healthLabels.includes(e.target.value)))
+      // } else {
+      //   setFilter("")
+      // }    
     }  
 
-    useEffect(() => {
-        SearchFilter()
-    }, [filter])
 
+    
 
   return (
     <div>
       <br/>
       <h1>Recipe List</h1>
-      < SearchBar query={query} handleChange={handleChange} />
-      <SearchFilter filter={filter} />
+      < SearchBar query={query} handleChange={handleChange} searchRecipe={searchRecipe} />
+      <SearchFilter handleFilter={handleFilter} />
     
       <div className="row row-cols-sm-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 justify-content-center">
-        {recipes
+        {recipes && filter==="" 
           // * render data inside cards using map() to iterate all elements fetched
         ? recipes.map((recipe, index) => (
             <div key={index}>
                 <RecipeCard recipe={recipe.recipe} />
             </div>
         ))
-        : null}
+        : filter ? filter.map((recipe, index) => (
+          <div key={index}>
+              <RecipeCard recipe={recipe.recipe} />
+          </div>
+        )): null}
       </div>
     </div>
   );

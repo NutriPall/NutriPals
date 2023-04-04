@@ -1,34 +1,25 @@
 import React from "react"
 
 
-const SearchFilter = (filter, handleFilter) => {
+const SearchFilter = ({handleFilter}) => {
     
 
   return (
     <div>
-        <label htmlFor="lunch/dinner"> Lunch/Dinner
-        <input type="checkbox" name="lunch/dinner" id="lunch/dinner" />
+        <label htmlFor="Mediterranean"> Mediterranean
+        <input type="checkbox" name="Mediterranean"  value="Mediterranean"  onChange={handleFilter}/>
         </label>
-        <label htmlFor="breakfast"> Breakfast
-        <input type="checkbox" name="breakfast" id="breakfast" />
-        </label>
-        <label htmlFor="snack"> Snack
-        <input type="checkbox" name="snack" id="snack" />
-        </label>
-        <label htmlFor="vegetarian"> Vegetarian
-        <input type="checkbox" name="vegetarian" id="vegetarian" />
-        </label>
-        <label htmlFor="vegan"> Vegan
-        <input type="checkbox" name="vegan" id="vegan" />
+        <label htmlFor="Gluten-Free"> Gluten-Free
+        <input type="checkbox" name="Gluten-Free"  value="Gluten-Free" onChange={handleFilter}/>
         </label>
         <label htmlFor="dairy"> Dairy
-        <input type="checkbox" name="dairy" id="dairy" />
+        <input type="checkbox" name="dairy" id="dairy" value="dairy" />
         </label>
         <label htmlFor="shellfish"> Shellfish
-        <input type="checkbox" name="shellfish" id="shellfish" />
+        <input type="checkbox" name="shellfish" id="shellfish" value="shellfish" />
         </label>
         <label htmlFor="peanuts"> Peanuts
-        <input type="checkbox" name="peanuts" id="peanuts" />
+        <input type="checkbox" name="peanuts" id="peanuts" value="peanuts" />
         </label>
     </div>
   )
