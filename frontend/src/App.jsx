@@ -8,12 +8,14 @@ import RecipeList from '@pages/RecipeList';
 import RecipeDetails from '@components/RecipeDetails/RecipeDetails';
 import ContactUs from "@pages/ContactUs/ContactUs";
 import Footer from "@components/Footer/Footer";
+import BurgerMenu from "@components/BurgerMenu/BurguerMenu";
 
 function App() {
 
   return (
     <>
     <div>
+          <BurgerMenu />
           <Navbar />
           <div className="routes">
           <Routes>
