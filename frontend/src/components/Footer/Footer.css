@@ -2,7 +2,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(212, 230, 237);
+    background-color: var(--main-color-footer);
     margin-top: 25px;
     margin-bottom: 0;
     max-height: 150px;
