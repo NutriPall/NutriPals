@@ -12,12 +12,16 @@
     padding-right: 30px;
   }
 
-  .navbar-list {
-    display: flex;
-  }
-  
   #logo {
     max-height: 60px;
     max-width: 60px;
-    padding: 0;
+    padding-right: 15px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
+
+.brand-name {
+    align-items: center;
+    margin-bottom: 0;
+  }
+
