@@ -1,15 +1,15 @@
 import React from "react";
 
-const SearchBar = ({ search, handleChange }) => {
+const SearchBar = ({ query, handleChange }) => {
   return (
     <div className="searchBar">
-      <label htmlFor="search">Search: </label>
+      <label htmlFor="query">Search: </label>
       <input
         className="searchBar-input"
         type="search"
-        name="search"
+        name="query"
         placeholder="Search for your favorite recipe"
-        value={search}
+        value={query}
         onChange={handleChange}
       />
     </div>
