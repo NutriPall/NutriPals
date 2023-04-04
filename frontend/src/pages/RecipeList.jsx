@@ -26,16 +26,18 @@ function RecipeList() {
 
 
   //* when the state changes, update the component
-  useEffect(() => {
-    searchRecipe();
-  }, [query]);
+  // useEffect(() => {
+  //   searchRecipe();
+  // }, [query]);
+
+
 
 
   return (
     <div>
       <br/>
       <h1>Recipe List</h1>
-      < SearchBar query={query} handleChange={handleChange} />
+      < SearchBar query={query} handleChange={handleChange} searchRecipe={searchRecipe} />
     
       <div className="row row-cols-sm-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 justify-content-center">
         {recipes
