@@ -30,19 +30,13 @@ function RecipeList() {
     searchRecipe();
   }, [query]);
 
+
   return (
     <div>
       <br/>
       <h1>Recipe List</h1>
       < SearchBar query={query} handleChange={handleChange} />
-      {/* <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-primary" onClick={()=>handleChange("chicken")}>Chicken</button>
-        <button type="button" class="btn btn-primary" onClick={()=>handleChange("fish")}>Fish</button>
-        <button type="button" class="btn btn-primary" onClick={()=>handleChange("beef")}>Beef</button>
-        <button type="button" class="btn btn-primary" onClick={()=>handleChange("pork")}>Pork</button>
-        <button type="button" class="btn btn-primary" onClick={()=>handleChange("vegetable")}>Vegetable</button>
-      </div> */}
-
+    
       <div className="row row-cols-sm-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 justify-content-center">
         {recipes
           // * render data inside cards using map() to iterate all elements fetched
