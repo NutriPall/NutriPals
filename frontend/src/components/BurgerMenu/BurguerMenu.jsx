@@ -8,7 +8,7 @@ export default function BurgerMenu() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div className="navbar-container navbar-expand-md">
+    <div className="navbar navbar-expand-md">
         <img
         className="nav-item"
         id="logo"
@@ -21,10 +21,11 @@ export default function BurgerMenu() {
         className="navbar-toggler"
         type="button"
         onClick={() => setShowMenu(!showMenu)}
-      >
+        aria-label="Toggle navigation"
+      > 
         <span className="navbar-toggler-icon"></span>
       </button>
-      <div className={`collapse navbar-collapse ${showMenu ? "show" : ""}`} >
+      <div className={`collapse navbar-collapse ${showMenu ? "show" : ""}`} id="navbarTogglerDemo01"> 
         <ul className="navbar-nav ms-auto">
           <li className="nav-item">
           <Link className="nav-link" to="/">
