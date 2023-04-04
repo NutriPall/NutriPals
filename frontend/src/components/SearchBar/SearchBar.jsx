@@ -1,17 +1,28 @@
 import React from "react";
+import search from "./image-search/search-icon.png"
 
-const SearchBar = ({ search, handleChange }) => {
+const SearchBar = ({ query, handleChange, searchRecipe }) => {
+
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Enter') {
+        searchRecipe()
+      }
+    }
+
   return (
     <div className="searchBar">
-      <label htmlFor="search">Search: </label>
+      <label htmlFor="query">Search: </label>
       <input
         className="searchBar-input"
         type="search"
-        name="search"
+        name="query"
         placeholder="Search for your favorite recipe"
-        value={search}
+        value={query}
         onChange={handleChange}
+        onKeyDown={handleKeyDown}
       />
+      <button type="button" name="submit" onClick={searchRecipe}><img src={search} alt="search" /></button>
     </div>
   );
 };

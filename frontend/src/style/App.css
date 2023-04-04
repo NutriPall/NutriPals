@@ -6,37 +6,43 @@
     --main-color-text: #36421c;
     --main-color-links: #667b6e;
     --main-color-links-visited: #84988c;
+    --main-color-footer: #b9d1da;
 }
 
 .routes {
     margin-left: 20px;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
     font-family: var(--main-font-heading);
     color: var(--main-color-text);
 }
 
 h1 {
-    font-size: clamp(42px, 5vw, 70px);
+    font-size: 40px;
 }
 
 h2 {
-    font-size: clamp(35px, 4.5vw, 60px);
+    font-size: 30px;
 }
 
 h3 {
-    font-size: clamp(28px, 4vw, 50px);
+    font-size: 20px;
 }
 
 h4 {
-    font-size: clamp(21px, 3vw, 30px);
+    font-size: 16px;
     font-style: italic;
+}
+
+h5 {
+    font-size: 14px;
+    font-weight: normal;
 }
 
 p, li {
   font-family: var(--main-font-text);
-  font-size: clamp(14px, 2vw, 25px);
+  font-size: 14px;
   color: var(--main-color-text);
 }
 
