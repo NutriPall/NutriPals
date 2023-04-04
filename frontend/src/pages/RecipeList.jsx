@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"
 import RecipeCard from "../components/RecipeCard/RecipeCard";
+import SearchBar from "@components/SearchBar/SearchBar";
 
 function RecipeList() {
   // Save data fetch in a state
   const [ recipes, setRecipes ] = useState();
   const [ query, setQuery ] = useState('');
+  
 
   //* fetch the new endpoint using the value of the search
   const searchRecipe = () => {
@@ -18,29 +20,25 @@ function RecipeList() {
   };
 
   //* for each value that has been insert, save it on a state
-  const handleChange = (value) => {
-    setQuery(value);
+  const handleChange = (e) => {
+    setQuery(e.target.value);
   };
 
 
   //* when the state changes, update the component
-  useEffect(() => {
-    searchRecipe();
-  }, [query]);
+  // useEffect(() => {
+  //   searchRecipe();
+  // }, [query]);
+
+
+
 
   return (
     <div>
       <br/>
       <h1>Recipe List</h1>
-
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-primary" onClick={()=>handleChange("chicken")}>Chicken</button>
-        <button type="button" class="btn btn-primary" onClick={()=>handleChange("fish")}>Fish</button>
-        <button type="button" class="btn btn-primary" onClick={()=>handleChange("beef")}>Beef</button>
-        <button type="button" class="btn btn-primary" onClick={()=>handleChange("pork")}>Pork</button>
-        <button type="button" class="btn btn-primary" onClick={()=>handleChange("vegetable")}>Vegetable</button>
-      </div>
-
+      < SearchBar query={query} handleChange={handleChange} searchRecipe={searchRecipe} />
+    
       <div className="row row-cols-sm-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 justify-content-center">
         {recipes
           // * render data inside cards using map() to iterate all elements fetched
