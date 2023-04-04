@@ -16,7 +16,6 @@ function App() {
     <>
     <div>
           <BurgerMenu />
-          <Navbar />
           <div className="routes">
           <Routes>
             <Route path="/" element={<Home />} />
