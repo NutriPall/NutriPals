@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import axios from "axios"
 import RecipeCard from "../components/RecipeCard/RecipeCard";
 import SearchBar from "@components/SearchBar/SearchBar";
+import SearchFilter from "@components/SearchFilter/SearchFilter";
 
 function RecipeList() {
   // Save data fetch in a state
   const [ recipes, setRecipes ] = useState();
   const [ query, setQuery ] = useState('');
+  const [filter, setFilter] = useState()
   
 
   //* fetch the new endpoint using the value of the search
@@ -30,12 +32,30 @@ function RecipeList() {
     searchRecipe();
   }, [query]);
 
+  
+
+    axios
+        .get(``)
+        .then((response) => {
+            setRecipes(response.data.hits)
+        })
+
+
+    const handleFilter = () => {
+        setFilter()
+    }  
+
+    useEffect(() => {
+        SearchFilter()
+    }, [filter])
+
 
   return (
     <div>
       <br/>
       <h1>Recipe List</h1>
       < SearchBar query={query} handleChange={handleChange} />
+      <SearchFilter filter={filter} />
     
       <div className="row row-cols-sm-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 justify-content-center">
         {recipes
