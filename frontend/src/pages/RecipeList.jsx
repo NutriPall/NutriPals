@@ -41,7 +41,7 @@ function RecipeList() {
         <button type="button" class="btn btn-primary" onClick={()=>handleChange("vegetable")}>Vegetable</button>
       </div>
 
-      <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 justify-content-center mt-5 mb-5">
+      <div className="row row-cols-sm-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 justify-content-center">
         {recipes
           // * render data inside cards using map() to iterate all elements fetched
         ? recipes.map((recipe, index) => (
