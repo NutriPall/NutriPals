@@ -4,6 +4,7 @@ import RecipeCard from "../components/RecipeCard/RecipeCard";
 import SearchBar from "@components/SearchBar/SearchBar";
 import SearchFilter from "@components/SearchFilter/SearchFilter";
 
+
 function RecipeList() {
   // Save data fetch in a state
   const [recipes, setRecipes] = useState();
