@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from "react"
+import "./SearchFilter.css"
+import "../../style/App.css"
 
 // const arrayFilters=["Mediterranean", "Gluten-Free", "Kosher"]
 
@@ -17,14 +19,15 @@ useEffect(()=>{
 },[])
 
   return (
-    <div>
+    <div className="filters-list">
       {uniqueFilters.map((filter, index) =>(
-        <div key={index}>
-          <label htmlFor={filter}>{filter} </label>
-          <br/>
-          <input type="checkbox" name={filter}  value={filter}  onChange={addFilter}/>
+        index < 10 ?
+        <div className="filter" key={index}>
+          <label htmlFor={filter}> <p>{filter}</p> </label>
+          <input className="checkbox"  type="checkbox" name={filter}  value={filter}  onChange={addFilter}/>
           <br/>
         </div>
+        : null
       ))}
     </div>
   )

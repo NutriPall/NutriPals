@@ -1,0 +1,17 @@
+.filters-list {
+    border: solid 2px var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 30px;
+    margin: 10px 20px;
+}
+
+.filter {
+    margin: 10px;
+}
+
+.checkbox {
+    margin-left: 8px;
+}
