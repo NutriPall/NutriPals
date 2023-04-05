@@ -1,6 +1,7 @@
 import React from "react";
 import TeamCard from "@components/TeamCard/TeamCard";
 import Carousel from "react-bootstrap/Carousel";
+import "./About-us.css";
 
 export default function AboutUs() {
   const teamMembers = [
