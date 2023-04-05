@@ -1,0 +1,23 @@
+.team-card {
+    border: none;
+    background-color: var(--main-color-footer);
+    padding: 15px;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 65%;
+    padding-bottom: 0;
+}
+
+ #linkedin-img {
+ max-width: 40px;
+ padding-top: none;
+ padding-bottom: none;
+ }
+
+ .team-member-img {
+    padding-top: 0;
+ }
