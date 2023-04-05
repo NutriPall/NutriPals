@@ -42,6 +42,11 @@ export default function BurgerMenu() {
             Recipe List
           </Link>
           </li>
+          <li className="nav-item">
+          <Link className="nav-link" to="/contact-us">
+            Contact Us
+          </Link>
+          </li>
         </ul>
       </div>
     </div>
