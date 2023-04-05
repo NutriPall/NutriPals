@@ -1,5 +1,6 @@
 import React from "react";
 import search from "./image-search/search-icon.png"
+import "./SearchBar.css"
 
 const SearchBar = ({ query, handleChange, searchRecipe }) => {
 
@@ -12,7 +13,7 @@ const SearchBar = ({ query, handleChange, searchRecipe }) => {
 
   return (
     <div className="searchBar">
-      <label htmlFor="query">Search: </label>
+      <label htmlFor="query"></label>
       <input
         className="searchBar-input"
         type="search"
@@ -22,7 +23,7 @@ const SearchBar = ({ query, handleChange, searchRecipe }) => {
         onChange={handleChange}
         onKeyDown={handleKeyDown}
       />
-      <button type="button" name="submit" onClick={searchRecipe}><img src={search} alt="search" /></button>
+      <button className="search-btn" type="button" name="submit" onClick={searchRecipe}><img className="search-img" src={search} alt="search" /></button>
     </div>
   );
 };
