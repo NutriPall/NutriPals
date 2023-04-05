@@ -23,7 +23,9 @@ const SearchBar = ({ query, handleChange, searchRecipe }) => {
         onChange={handleChange}
         onKeyDown={handleKeyDown}
       />
-      <button className="search-btn" type="button" name="submit" onClick={searchRecipe}><img className="search-img" src={search} alt="search" /></button>
+      <button className="btn btn-outline-secondary search-btn" type="button" name="submit" onClick={searchRecipe}>
+      <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
     </div>
   );
 };
