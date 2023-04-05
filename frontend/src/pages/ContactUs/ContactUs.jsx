@@ -1,8 +1,10 @@
 import React from "react";
+import PopUp from "@components/PopUp/PopUp";
 import { useState } from "react";
 import phone from "./images/phone-icon.png"
 import email from "./images/email-icon.png";
 import "./ContactUs.css";
+import "../../style/App.css"
 
 const ContactUs = () => {
   const [value, setValue] = useState({
@@ -12,7 +14,13 @@ const ContactUs = () => {
     comments: "",
   });
 
-  const handleSubmit = (e) => e.preventDefault();
+  const [buttonPopUp, setButtonPopUp] = useState(false)
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setButtonPopUp(true)
+
+  } 
   const handleChange = (e) =>
     setValue({ ...value, [e.target.name]: e.target.value });
   //   const handleChangeComments = (e) => setValue({...value, comments:e.target.value})
@@ -20,19 +28,23 @@ const ContactUs = () => {
   //   const handleChangeLastName = (e) => setValue({...value, name,last:e.target.value})
 
   return (
-    <div>
-      <h1 className="contact-us-title">We would love to hear from you</h1>
+    <div className="contact-div">
+      <h1 className="contact-us-title contact-us-title-two ">We would love to hear from you</h1>
       <div className="contacts">
-      <img id="phone-icon" src={phone} alt="email icon" />
-      <img className="email-icon" src={email} alt="email icon" />
-      <p className="phone-text">123123123</p>
-      <p className="email-text">hellonutripal@nutripals.com</p>
+        <div className="contacts-phone">
+          <img className="phone-icon" src={phone} alt="email icon" />
+          <p className="phone-text">123123123</p>
+        </div>  
+        <div className="contacts-email">
+          <img className="email-icon" src={email} alt="email icon" />
+          <p className="email-text">hellonutripal@nutripals.com</p>
+        </div>
       </div>
       <h2 className="contact-us-title">Leave us a message</h2>
       <form action="" onSubmit={handleSubmit}>
         <label htmlFor="name">What's your name?</label>
-        <p>First name</p>
-        <input
+        <p className="small-label">First name</p>
+        <input required
           type="text"
           name="firstName"
           id="name"
@@ -40,8 +52,8 @@ const ContactUs = () => {
           value={value.firstName}
           onChange={handleChange}
         />
-        <p>Last name</p>
-        <input
+        <p className="small-label">Last name</p>
+        <input required
           type="text"
           name="lastName"
           id="name"
@@ -50,7 +62,7 @@ const ContactUs = () => {
           onChange={handleChange}
         />
         <label htmlFor="email">Email</label>
-        <input
+        <input required
           type="email"
           name="email"
           id="email"
@@ -68,7 +80,11 @@ const ContactUs = () => {
           cols="30"
           rows="5"
         ></textarea>
-        <input type="submit" value="Submit" />
+        <input required type="submit" value="Submit" onClick={handleSubmit} />
+          
+        <PopUp  trigger={buttonPopUp} setTrigger={setButtonPopUp}>
+          <h2>Thank you for your feedback, {value.firstName} {value.lastName}</h2>
+        </PopUp>
       </form>
     </div>
   );
