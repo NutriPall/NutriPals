@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import phone from "./images/phone-icon.png"
 import email from "./images/email-icon.png";
+import "./ContactUs.css";
 
 const ContactUs = () => {
   const [value, setValue] = useState({
@@ -20,37 +21,40 @@ const ContactUs = () => {
 
   return (
     <div>
-      ContactUs
-      <h1>We would love to hear from you</h1>
-      <img src={phone} alt="email icon" />
-      <p>123123123</p>
-      <img src={email} alt="email icon" />
-      <p>randomdude@gmail.com</p>
-      <h2>Message us</h2>
-      <h3>Talk to us for feedback</h3>
+      <h1 className="contact-us-title">We would love to hear from you</h1>
+      <div className="contacts">
+      <img id="phone-icon" src={phone} alt="email icon" />
+      <img className="email-icon" src={email} alt="email icon" />
+      <p className="phone-text">123123123</p>
+      <p className="email-text">hellonutripal@nutripals.com</p>
+      </div>
+      <h2 className="contact-us-title">Leave us a message</h2>
       <form action="" onSubmit={handleSubmit}>
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">What's your name?</label>
+        <p>First name</p>
         <input
           type="text"
           name="firstName"
           id="name"
+          placeholder="Caroline"
           value={value.firstName}
           onChange={handleChange}
         />
-        <p>First</p>
+        <p>Last name</p>
         <input
           type="text"
           name="lastName"
           id="name"
+          placeholder="Forbes"
           value={value.lastName}
           onChange={handleChange}
         />
-        <p>Last</p>
         <label htmlFor="email">Email</label>
         <input
           type="email"
           name="email"
           id="email"
+          placeholder="carolineforbes@example.com"
           value={value.email}
           onChange={handleChange}
         />
@@ -58,10 +62,11 @@ const ContactUs = () => {
         <textarea
           name="comments"
           id="comments"
+          placeholder="Let us know how we can improve."
           value={value.comments}
           onChange={handleChange}
           cols="30"
-          rows="10"
+          rows="5"
         ></textarea>
         <input type="submit" value="Submit" />
       </form>

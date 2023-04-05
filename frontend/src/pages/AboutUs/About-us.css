@@ -1,7 +1,7 @@
 
 .team-card {
     border: none !important;
-    background-color: var(--main-color-footer) !important;
+    background-color: var(--main-color) !important;
     padding: 15px;
   }
 
@@ -25,7 +25,7 @@
 }
 
 .story-li:hover {
-    background-color: var(--main-color);
+    background-color: var(--main-color-footer);
 }
 
 #about-us-img {
