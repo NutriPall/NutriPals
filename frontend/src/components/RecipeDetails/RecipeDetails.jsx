@@ -2,9 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import jsPDF from "jspdf";
-// import RecipeDetailHtml from "./RecipeDetailsHtml"
-// import ReportTemplate from "./ReportTemplate";
-// import RecipeCard from "../RecipeCard/RecipeCard";
+import SocialMedia from "@components/SocialMedia/SocialMedia";
 
 const RecipeDetails = (imageUrl) => {
   // print recipe
@@ -50,41 +48,47 @@ const RecipeDetails = (imageUrl) => {
     <>
       <div className="container">
         <div className="container d-flex flex-column align-items-center">
-        <div className="row">
-            <div className="col-lg-5 col-md-5 col-sm-12">
+          <div className="row">
+            <div className="col-lg-6 col-md-6 col-sm-12">
               <img
-                class="mx-auto d-block shadow p-2 mb-3 mt-3 bg-body-tertiary rounded"
+                className="mx-auto d-block shadow p-2 mb-3 mt-3 bg-body-tertiary rounded"
                 src={recipe.images?.REGULAR?.url}
                 alt={recipe.label}
               />
             </div>
-          
-            <div className="col-lg-2 col-md-2 col-sm-12 d-flex justify-content-start align-items-center">
-              <button
-                className="button"
-                onClick={() => handleGeneratePdf(recipe.images?.REGULAR?.url)}
-              >
-                Generate PDF
-              </button>
-            </div>
-            <div className="col-lg-2 col-md-2 col-sm-12 d-flex justify-content-start align-items-center">
-              <button
-                className="btn btn-outline-secondary mx-auto"
-                onClick={() => window.open(recipe.url, "_blank")}
-                type="button"
-              >
-                Instructions
-              </button>
-            </div>
-            <div className="col-lg-3 col-md-3 col-sm-12 d-flex justify-content-start align-items-center">
-              <p>on {recipe.source}</p>
+            <div className="col-lg-6 col-md-6 col-sm-12 g-lg-5 g-md-5">
+              <div className="row g-lg-5 g-md-5">
+                <div className="col-lg-5 col-md-12 col-sm-6 d-flex justify-content-start align-items-center">
+                  <button
+                    className="btn btn-outline-secondary mx-auto"
+                    onClick={() =>
+                      handleGeneratePdf(recipe.images?.REGULAR?.url)
+                    }
+                  >
+                    Generate PDF
+                  </button>
+                </div>
+                <div className="col-lg-3 col-md-6 col-sm-6 d-flex justify-content-start align-items-center">
+                  <button
+                    className="btn btn-outline-secondary mx-auto"
+                    onClick={() => window.open(recipe.url, "_blank")}
+                    type="button"
+                  >
+                    Instructions
+                  </button>
+                </div>
+                <div className="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-start text-center">
+                  <p>on {recipe.source}</p>
+                </div>
+                <div className="col-md-12 d-flex">
+                  <SocialMedia />
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="row">
-          
-
           <section ref={reportTemplateRef}>
             <div className="col-lg-7 col-md-8 col-sm-12">
               <h3>{recipe.label}</h3>
