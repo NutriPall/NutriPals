@@ -1,6 +1,47 @@
+
+.founding-story {
+    display: flex;
+    flex-direction: column;
+}
+
+#story-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+}
+
+.story-li {
+    font-size: 20px;
+    list-style-type: none;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+}
+
+.story-li:hover {
+    background-color: var(--main-color);
+}
+
+#about-us-img {
+    display: none;
+    max-height: 500px;
+    margin-right: 25px;
+    margin-left: 150px;
+}
+
 .team-card {
     border: none;
     background-color: var(--main-color-footer);
     padding: 15px;
   }
+
+.about-us-title {
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
   
+@media screen and (min-width: 913px) {
+    #about-us-img {
+        display: block;
+    }
+     }

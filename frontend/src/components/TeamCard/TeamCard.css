@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    max-width: 65%;
+    max-width: 100%;
     padding-bottom: 0;
 }
 
@@ -20,4 +20,15 @@
 
  .team-member-img {
     padding-top: 0;
+    max-height: 450px;
+    max-width: 450px;
+ }
+
+ @media screen and (min-width: 641px) {
+.team-card {
+    max-width: 50%;
+}
+.title-container {
+    max-width: 50%;
+}
  }
