@@ -1,5 +1,7 @@
 import React from "react";
 import { Link} from "react-router-dom"
+import "../../style/App.css"
+import "./RecipeCard.css"
 
 function RecipeCard({ recipe }) {
 
@@ -7,6 +9,7 @@ function RecipeCard({ recipe }) {
     const imageUrl = recipe.images?.REGULAR?.url;
     const nrIngredients = recipe.ingredientLines.length
     const recipeId = recipe.uri.slice(recipe.uri.indexOf("_") + 1);
+    
 
   return recipe ? (
     
@@ -17,7 +20,7 @@ function RecipeCard({ recipe }) {
         <h5>{nrIngredients} ingred | {mealType}</h5>
         <h5>{source}</h5>
         <Link to={`/recipe/${recipeId}`}>
-          <button className="btn btn-outline-secondary" type="button" >Open Recipe</button>
+          <button className="btn-primary" type="button" >Open Recipe</button>
         </Link>
     </div>
   ) : null;
