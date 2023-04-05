@@ -68,12 +68,20 @@ function RecipeList() {
   return (
     <div>
       <br />
-      <h1>Recipe List</h1>
-      <SearchBar
+      <div className="row">
+        <div className="col-lg-4 col-md-5 text-center">
+          <h1>Recipe List</h1>
+        </div>
+        <div className="col-lg-3 col-md-4">
+         <SearchBar
         query={query}
         handleChange={handleChange}
         searchRecipe={searchRecipe}
-      />
+      /> 
+        </div>
+
+      </div>
+      
       {recipes && recipes.length > 0 && (
         <SearchFilter addFilter={addFilter} recipes={recipes} />
       )}
