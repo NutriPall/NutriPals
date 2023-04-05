@@ -13,7 +13,7 @@ export default function AboutUs() {
     },
     {
       fullName: "Luiz Ferri",
-      src: "https://i.imgur.com/Afl0gIr.png",
+      src: "https://i.imgur.com/13WUdn9.png",
       linkedinUrl: "https://www.linkedin.com/in/luiz-ferri/",
       description: "With a background in data visualization, emissions reporting, and process improvement, Luiz is committed to using his skills to help Nutripal achieve its mission of making healthy eating easy and accessible for everyone."
     },

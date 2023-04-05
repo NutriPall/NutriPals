@@ -1,4 +1,10 @@
 
+.team-card {
+    border: none !important;
+    background-color: var(--main-color-footer) !important;
+    padding: 15px;
+  }
+
 .founding-story {
     display: flex;
     flex-direction: column;
@@ -28,12 +34,6 @@
     margin-right: 50px;
     margin-left: 150px;
 }
-
-.team-card {
-    border: none;
-    background-color: var(--main-color-footer);
-    padding: 15px;
-  }
 
 .about-us-title {
     margin-top: 40px;
