@@ -11,25 +11,29 @@ export default function HomePage() {
   return (    
 
     <>
+    <h2 className="title-page">Cooking is one of the most beautiful aspects of human life. Through it,
+            we can experience unique flavors, aromas and textures that make us feel
+            alive and connected with the world around us.</h2>
+            <h2>Discover your recipe with us.</h2>
     <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img src={image1} className="d-block w-100" alt="..."/>
+          <img src={image1} className="d-block w-50" alt="..."/>
         </div>
         <div className="carousel-item">
-          <img src={image2} className="d-block w-100" alt="..."/>
+          <img src={image2} className="d-block w-50" alt="..."/>
         </div>
         <div className="carousel-item">
-          <img src={image3} className="d-block w-100" alt="..."/>
+          <img src={image3} className="d-block w-50" alt="..."/>
         </div>
         <div className="carousel-item active">
-          <img src={image4} className="d-block w-100" alt="..."/>
+          <img src={image4} className="d-block w-50" alt="..."/>
         </div>
         <div className="carousel-item">
-          <img src={image5} className="d-block w-100" alt="..."/>
+          <img src={image5} className="d-block w-50" alt="..."/>
         </div>
         <div className="carousel-item">
-          <img src={image6} className="d-block w-100" alt="..."/>
+          <img src={image6} className="d-block w-50" alt="..."/>
         </div>
       </div>
       <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
