@@ -3,6 +3,8 @@ import axios from "axios";
 import RecipeCard from "../components/RecipeCard/RecipeCard";
 import SearchBar from "@components/SearchBar/SearchBar";
 import SearchFilter from "@components/SearchFilter/SearchFilter";
+import RecipeIntro from "@components/RecipeIntro/RecipeIntro";
+import "../style/RecipeList.css";
 
 
 function RecipeList() {
@@ -67,6 +69,8 @@ function RecipeList() {
 
   return (
     <div>
+      <RecipeIntro />
+      <br />
       <br />
       <div className="row">
         <div className="col-lg-4 col-md-5 text-center">
@@ -78,6 +82,8 @@ function RecipeList() {
         handleChange={handleChange}
         searchRecipe={searchRecipe}
       /> 
+      <br />
+      <br />
         </div>
 
       </div>
@@ -108,6 +114,17 @@ function RecipeList() {
             ))
           : null}
       </div>
+      {recipes ? null : (
+        <div className="instructions">
+          <h2 className="instructions-title">
+            Find your next meal in 3 easy steps:</h2>
+        <ol className="ol-list">
+          <li className="instructions-item">Search for your favorite ingredient, cuisine type, or dietary preference. Use the search filters to find the exact option for you.</li>
+          <li className="instructions-item">Visit the recipe page to know more about nutritional value and click on "Create PDF"</li>
+          <li className="instructions-item">Start cooking delicious meals!</li>
+        </ol>
+      </div>
+      )}
     </div>
   );
 }

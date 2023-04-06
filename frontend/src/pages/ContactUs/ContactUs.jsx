@@ -23,9 +23,7 @@ const ContactUs = () => {
   } 
   const handleChange = (e) =>
     setValue({ ...value, [e.target.name]: e.target.value });
-  //   const handleChangeComments = (e) => setValue({...value, comments:e.target.value})
-  //   const handleChangeFirstName = (e) => setValue({...value, name,first:e.target.value})
-  //   const handleChangeLastName = (e) => setValue({...value, name,last:e.target.value})
+  
 
   return (
     <div className="contact-div">
@@ -41,10 +39,11 @@ const ContactUs = () => {
         </div>
       </div>
       <h2 className="contact-us-title">Leave us a message</h2>
-      <form action="" onSubmit={handleSubmit}>
+      <form className="form-contact" action="" onSubmit={handleSubmit}>
         <label htmlFor="name">What's your name?</label>
         <p className="small-label">First name</p>
         <input required
+          className="input-contact"
           type="text"
           name="firstName"
           id="name"
@@ -53,7 +52,7 @@ const ContactUs = () => {
           onChange={handleChange}
         />
         <p className="small-label">Last name</p>
-        <input required
+        <input className="input-contact" required
           type="text"
           name="lastName"
           id="name"
@@ -63,6 +62,7 @@ const ContactUs = () => {
         />
         <label htmlFor="email">Email</label>
         <input required
+          className="input-contact"
           type="email"
           name="email"
           id="email"
@@ -80,7 +80,7 @@ const ContactUs = () => {
           cols="30"
           rows="5"
         ></textarea>
-        <input required type="submit" value="Submit" onClick={handleSubmit} />
+        <input className="input-submit" required type="submit" value="Submit" onClick={handleSubmit} />
           
         <PopUp  trigger={buttonPopUp} setTrigger={setButtonPopUp}>
           <h2>Thank you for your feedback, {value.firstName} {value.lastName}</h2>

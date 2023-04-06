@@ -7,7 +7,6 @@ import image4 from "./HomepageImj/recipe4.jpg"
 import image5 from "./HomepageImj/recipe5.jpg"
 import image6 from "./HomepageImj/recipe6.jpg"
 
-
 export default function HomePage() {
   return (    
 
