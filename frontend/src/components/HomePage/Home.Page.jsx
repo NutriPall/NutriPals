@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./HomePage.css";
 
 export default function HomePage() {
@@ -14,15 +14,15 @@ export default function HomePage() {
       </div>
       <div className="line1">
         <div className="recipe1">
-          <img src="HomePageImj/recipe1.jpg" alt="recipe picture" />
+          <img src={recipe1} alt="recipe picture" />
         </div>
 
         <div className="recipe2">
-          <img src="HomePageImj/recipe2.png" alt="recipe picture" />
+          <img src="./HomePageImj/recipe2.png" alt="recipe picture" />
         </div>
 
         <div className="recipe3">
-          <img src="HomePageImj/recipe3.jpg" alt="recipe picture" />
+          <img src="./HomePageImj/recipe3.jpg" alt="recipe picture" />
         </div>
       </div>
       <div className="line2">
