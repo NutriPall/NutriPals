@@ -8,9 +8,10 @@
 }
 
  #linkedin-img {
- max-width: 40px;
- padding-top: none;
- padding-bottom: none;
+padding-top: 25px;
+padding-bottom: 25px;
+border-radius: 50px;
+width: 1.5rem;
  }
 
 .team-member-img {

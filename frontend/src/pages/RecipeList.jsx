@@ -3,6 +3,7 @@ import axios from "axios";
 import RecipeCard from "../components/RecipeCard/RecipeCard";
 import SearchBar from "@components/SearchBar/SearchBar";
 import SearchFilter from "@components/SearchFilter/SearchFilter";
+import RecipeIntro from "@components/RecipeIntro/RecipeIntro";
 
 
 function RecipeList() {
@@ -67,6 +68,8 @@ function RecipeList() {
 
   return (
     <div>
+      <RecipeIntro />
+      <br />
       <br />
       <div className="row">
         <div className="col-lg-4 col-md-5 text-center">
@@ -78,6 +81,8 @@ function RecipeList() {
         handleChange={handleChange}
         searchRecipe={searchRecipe}
       /> 
+      <br />
+      <br />
         </div>
 
       </div>
