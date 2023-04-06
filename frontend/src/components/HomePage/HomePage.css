@@ -1,0 +1,71 @@
+
+
+.description {
+  margin-left: 300px;
+  margin-right: 300px;
+    }
+.line1{
+    display:inline-flex;
+    justify-content:center;
+
+}
+.line2{
+    display:inline-flex;
+
+}
+.recipe1 img{
+    display:flex;
+    width: 300px;
+    height: 200px;
+    padding: 38px;
+    left: 17.7%;
+    top: 47.4%;
+
+    }
+    
+.recipe2 img{
+    display:flex;
+    width: 300px;
+    padding: 38px;
+    height: 200px;
+    left: 42.7%;
+    top: 47.4%;
+    }
+    
+.recipe3 img{
+    display:flex;
+    width: 300px;
+    padding: 38px;
+    height: 200px;
+    left: 65.9%;
+    top: 47.5%;
+    }
+    
+.recipe4 img{
+    
+    display:flex;
+    width: 300px;
+    height: 200px;
+    padding: 38px;
+    left: 17.7%;
+    top: 64.1%;
+    }
+
+.recipe5 img{
+    display:flex;
+    padding: 38px;
+    width: 300px;
+    height: 200px;
+    left: 42.9%;
+    top: 64.1%;
+    }
+    
+.recipe6 img{
+    display:flex;
+    padding: 38px;
+    width: 300px;
+    height: 200px;
+    left: 65.4%;
+    top: 64.1%;
+    }
+

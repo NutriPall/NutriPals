@@ -1,0 +1,4 @@
+.container {
+    border: 2px solid var(--main-color);
+    margin: 10px auto;
+}
