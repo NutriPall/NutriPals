@@ -30,7 +30,7 @@ const ContactUs = () => {
       <h1 className="contact-us-title contact-us-title-two ">We would love to hear from you</h1>
       <div className="contacts">
         <div className="contacts-phone">
-          <img className="phone-icon" src={phone} alt="email icon" />
+          <img className="phone-icon" src={phone} alt="phone icon" />
           <p className="phone-text">123123123</p>
         </div>  
         <div className="contacts-email">
