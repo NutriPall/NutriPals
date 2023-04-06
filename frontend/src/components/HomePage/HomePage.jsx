@@ -1,6 +1,12 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 import "./HomePage.css";
+import image1 from "./HomepageImj/recipe1.jpg"
+import image2 from "./HomepageImj/recipe2.png"
+import image3 from "./HomepageImj/recipe3.jpg"
+import image4 from "./HomepageImj/recipe4.jpg"
+import image5 from "./HomepageImj/recipe5.jpg"
+import image6 from "./HomepageImj/recipe6.jpg"
 
 export default function HomePage() {
   return (
@@ -14,28 +20,28 @@ export default function HomePage() {
       </div>
       <div className="line1">
         <div className="recipe1">
-          <img src={recipe1} alt="recipe picture" />
+          <img src={image1} alt="recipe picture" />
         </div>
 
         <div className="recipe2">
-          <img src="./HomePageImj/recipe2.png" alt="recipe picture" />
+          <img src={image2} alt="recipe picture" />
         </div>
 
         <div className="recipe3">
-          <img src="./HomePageImj/recipe3.jpg" alt="recipe picture" />
+          <img src={image3} alt="recipe picture" />
         </div>
       </div>
       <div className="line2">
         <div className="recipe4">
-          <img src="HomePageImj/recipe4.jpg" alt="recipe picture" />
+          <img src={image4} alt="recipe picture" />
         </div>
 
         <div className="recipe5">
-          <img src="HomePageImj/recipe5.jpg" alt="recipe picture" />
+          <img src={image5} alt="recipe picture" />
         </div>
 
         <div className="recipe6">
-          <img src="HomePageImj/recipe6.jpg" alt="recipe picture" />
+          <img src={image6} alt="recipe picture" />
         </div>
       </div>
     </div>
