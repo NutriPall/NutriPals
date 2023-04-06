@@ -7,7 +7,7 @@ import RecipeDetails from '@components/RecipeDetails/RecipeDetails';
 import ContactUs from "@pages/ContactUs/ContactUs";
 import Footer from "@components/Footer/Footer";
 import BurgerMenu from "@components/BurgerMenu/BurguerMenu";
-import HomePage from "@components/HomePage/Home.Page";
+import HomePage from "@components/HomePage/HomePage";
 
 function App() {
 
