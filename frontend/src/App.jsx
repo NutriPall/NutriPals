@@ -7,8 +7,8 @@ import RecipeDetails from '@components/RecipeDetails/RecipeDetails';
 import ContactUs from "@pages/ContactUs/ContactUs";
 import Footer from "@components/Footer/Footer";
 import BurgerMenu from "@components/BurgerMenu/BurguerMenu";
-import HomePage from "@components/Home.Page";
-
+import HomePage from "@components/HomePage/HomePage";
+import SignUp from "@pages/SignUp/SignUp";
 
 function App() {
 
@@ -23,6 +23,7 @@ function App() {
             <Route path="/recipes-list" element={<RecipeList />} />
             <Route path="/recipe/:id" element={<RecipeDetails />} />
             <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/sign-up" element={<SignUp />} />
           </Routes>
           </div>
           <Footer />
