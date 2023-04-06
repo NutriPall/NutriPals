@@ -1,0 +1,13 @@
+.recipeIntro .recipe-intro-img {
+    display: none;
+    width: 100%;
+    height: 250px;
+    border-radius: 0;
+    padding-right: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    .recipeIntro .recipe-intro-img {
+        display: block;
+    }
+     }
