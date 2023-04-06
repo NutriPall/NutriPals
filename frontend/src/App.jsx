@@ -7,11 +7,7 @@ import RecipeDetails from '@components/RecipeDetails/RecipeDetails';
 import ContactUs from "@pages/ContactUs/ContactUs";
 import Footer from "@components/Footer/Footer";
 import BurgerMenu from "@components/BurgerMenu/BurguerMenu";
-<<<<<<< HEAD
 import HomePage from "@components/HomePage/Home.Page";
-=======
-import HomePage from "@components/HomePage/HomePage";
->>>>>>> 111acebac0f56aba50c2b1d029600d0768341514
 
 function App() {
 
