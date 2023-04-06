@@ -5,6 +5,9 @@
     border-radius: 0;
     padding-right: 20px;
   }
+.carousel-indicators, .carousel-control-next-icon, .carousel-control-prev-icon {
+  display: none;
+}  
 
   @media screen and (min-width: 1200px) {
     .recipeIntro .recipe-intro-img {
