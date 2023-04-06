@@ -33,6 +33,11 @@ export default function Navbar() {
             Contact Us
           </Link>
         </li>
+        <li className="nav-item">
+          <Link to="/sign-up" className="menu-item">
+            Sign Up
+          </Link>
+        </li>
       </ul>
     </div>
   );
