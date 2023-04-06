@@ -1,0 +1,15 @@
+.instructions-item {
+    font-size: 17px;
+    list-style-type: none;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+}
+
+.instructions-item:hover {
+    background-color: var(--main-color);
+}
+
+.instructions-title{
+    padding-top: 50px;
+}
