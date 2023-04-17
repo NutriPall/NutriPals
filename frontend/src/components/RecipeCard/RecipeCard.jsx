@@ -14,7 +14,7 @@ function RecipeCard({ recipe }) {
   return recipe ? (
     
     <div className="container text-center">
-      {imageUrl && <img className="shadow p-2 mb-3 bg-body-tertiary rounded" src={imageUrl} alt={label} />}
+      {imageUrl && <img className="shadow p-2 mb-3 bg-body-tertiary rounded img-fluid" src={imageUrl} alt={label} />}
       <h4>{label}</h4>
         <h5>{calories.toFixed(0)} cal</h5>
         <h5>{nrIngredients} ingred | {mealType}</h5>
